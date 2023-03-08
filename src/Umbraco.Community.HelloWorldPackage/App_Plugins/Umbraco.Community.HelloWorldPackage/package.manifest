@@ -1,0 +1,19 @@
+{
+    "name": "Umbraco.Community.HelloWorldPackage",
+    "version": "0.1.0",
+    "allowPackageTelemetry": true,
+
+            "dashboards":  [
+                {
+                    "alias": "welcomeDashboard",
+                    "view":  "/App_Plugins/Umbraco.Community.HelloWorldPackage/WelcomeDashboard.html",
+                    "sections":  [ "content" ],
+                    "weight": -10,
+                    "access": [
+                        { "deny": "translator" },
+                        { "grant": "admin" }
+                    ]
+                }
+            ]
+}
+

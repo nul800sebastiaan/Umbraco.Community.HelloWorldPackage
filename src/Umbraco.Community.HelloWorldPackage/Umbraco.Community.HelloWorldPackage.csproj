@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ContentTargetFolders>.</ContentTargetFolders>
+    <Product>Umbraco.Community.Umbraco.Community.HelloWorldPackage</Product>
+    <PackageId>Umbraco.Community.Umbraco.Community.HelloWorldPackage</PackageId>
+    <Title>Umbraco.Community.HelloWorldPackage</Title>
+    <Description>...</Description>
+    <PackageTags>umbraco;umbraco-marketplace</PackageTags>
+    <RootNamespace>Umbraco.Community.Umbraco.Community.HelloWorldPackage</RootNamespace>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>0.1.0</Version>
+    <Authors>Sebastiaan Janssen</Authors>
+    <Copyright>2023 © Sebastiaan Janssen</Copyright>
+    <PackageProjectUrl>https://github.com/nul800sebastiaan/Umbraco.Community.HelloWorldPackage</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nul800sebastiaan/Umbraco.Community.HelloWorldPackage</RepositoryUrl>
+    <PackageReadmeFile>README_nuget.md</PackageReadmeFile>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="10.4.0" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="10.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="App_Plugins\Umbraco.Community.HelloWorldPackage\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="Always" />
+    <None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\docs\README_nuget.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
